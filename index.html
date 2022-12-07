@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Based Image Retrieval System</title>
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;700&display=swap" rel="stylesheet">
+    <!--Pure-->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+        integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <!--CSS file-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="page">
+        <div class="pure-g">
+            <div class="pure-u-1">
+                <h1>
+                    Content Based Image Retrieval System
+                </h1>
+            </div>
+        </div>
+        <div class="pure-g">
+            <div class="pure-u-1">
+                <h3>
+                    About this project
+                </h3>
+                <p>
+                    This project was a group school assignment completed in May 2022.
+                </p>
+                <p>
+                    The objective of this project was to design and create a Content Based Image Retrieval system by applying both
+                    image processing and machine learning techniques.
+                </p>
+            </div>
+        </div>
+        <div class="pure-g">
+            <div class="pure-u-1">
+                <h3>
+                    Project outcomes
+                </h3>
+                <p>
+                    First, my teammates and I started the project by carrying out research on related topics. We looked into the 
+                    methodologies or algorithms proposed by the other researchers to solve the same or similar problem. 
+                </p>
+                <p>
+                    After that, we derived and implemented a feasible solution for Content Based Image Retrieval (CBIR), which is 
+                    a Support Vector Machine (SVM) that classifies the images using the following 3 types of features: 
+                </p>
+                <ul>
+                    <li>
+                        Color Moments (CM), which measures the mean and the standard deviation of each RGB colour component.
+                    </li>
+                    <li>
+                        Local Binary Pattern (LBP), which represents the image texture. It was computed using the MATLAB built-in 
+                        method called "extractLBPFeatures".
+                    </li>
+                    <li>
+                        Histogram of Oriented Gradients (HOG), which represents the shapes of the objects within an image. It was 
+                        computed using the MATLAB built-in method called "extractHOGFeatures".
+                    </li>
+                </ul>
+                <p>
+                    The diagram below shows how the system works overall.
+                </p>
+                <div class="image">
+                    <img src="images/1.png" alt="System">
+                </div>
+                <p>
+                    To measure the model's performance, we computed the prediction accuracy and found that it achieves 0.81 or 81%
+                    on average. 
+                </p>
+                <p>
+                    Besides, we manually tested the model's generalisation power using 4 new images. Below is a screenshot of the 
+                    result.
+                </p>
+                <div class="image">
+                    <img src="images/2.png" alt="Result">
+                </div>
+                <p>
+                    Finally, we evaluated the strengths and weaknesses of our Content Based Image Retrieval (CBIR) system.
+                </p>
+                <ul>
+                    <li>
+                        Strengths:
+                        <ol>
+                            <li>
+                                It accepts RGB images in any size.
+                            </li>
+                            <li>
+                                It accepts unannotated images, which are images without any metadata such as captions and keywords.
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        Weaknesses:
+                        <ol>
+                            <li>
+                                It does not accept grayscale images due to the usage of the Color Moments (CM) feature.
+                            </li>
+                            <li>
+                                It is not invariant to image rotation due to the usage of the Local Binary Pattern (LBP) and 
+                                Histogram of Oriented Gradients (HOG) features.
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+                <p>
+                    The dataset used for model training and testing was adapted from the 
+                    <a target="_blank" href="https://www.kaggle.com/datasets/puneet6060/intel-image-classification">
+                        Intel Image Classification Dataset
+                    </a>
+                    . It contains a total of 2800 RGB images distributed in the following 4 categories:
+                </p>
+                <ul>
+                    <li>
+                        Building
+                    </li>
+                    <li>
+                        Forest
+                    </li>
+                    <li>
+                        Mountain
+                    </li>
+                    <li>
+                        Sea
+                    </li>
+                </ul>
+                <p>
+                    In this project, I was responsible for writing the code to train and test the model. Below is a snippet of my 
+                    codework, which was written using the MATLAB programming language. 
+                </p>
+                <div class="image">
+                    <img src="images/3.png" alt="Codework">
+                </div>
+            </div>
+        </div>
+        <div class="pure-g">
+            <div class="pure-u-1">
+                <h3>
+                    Summary
+                </h3>
+                <ul>
+                    <li>
+                        Programming language: MATLAB
+                    </li>
+                    <li>
+                        Scope: Image Processing, Computer Vision, Support Vector Machine
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
